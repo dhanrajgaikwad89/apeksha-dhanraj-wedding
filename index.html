@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f2e9">
+  <meta name="description" content="Apeksha and Dhanraj are getting married. Join us as we begin a lifetime of togetherness. Wedding date and venue will be announced soon.">
+  <title>Apeksha &amp; Dhanraj | Our forever begins</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="monogram" href="#home" aria-label="Apeksha and Dhanraj, home">A<span>&amp;</span>D</a>
+    <nav aria-label="Main navigation">
+      <a href="#invitation">The invitation</a>
+      <a href="#celebration">The celebration</a>
+    </nav>
+    <button class="share-button" id="share" type="button">Share our joy <span aria-hidden="true">↗</span></button>
+  </header>
+  <main>
+    <section class="hero" id="home" aria-labelledby="couple-names">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-wash" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> A NEW CHAPTER, TOGETHER <span></span></p>
+        <p class="intro">We're getting married</p>
+        <h1 id="couple-names">Apeksha <em>&amp;</em> Dhanraj</h1>
+        <p class="hero-message">Two hearts. One beautiful beginning.</p>
+        <div class="small-ornament" aria-hidden="true">✧</div>
+        <p class="hero-note">A lifetime of love awaits.<br>And we'd love for you to be part of it.</p>
+        <a class="primary-button" href="#invitation">You're invited <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-bottom">
+        <span>WITH LOVE, ALWAYS</span>
+        <a href="#celebration">Date &amp; venue to be announced <span aria-hidden="true">↗</span></a>
+        <span>OUR FOREVER BEGINS</span>
+      </div>
+    </section>
+    <section class="invitation section-pad" id="invitation" aria-labelledby="invitation-heading">
+      <div class="invitation-side" aria-hidden="true"><span>A</span><i>&amp;</i><span>D</span></div>
+      <div class="invitation-copy">
+        <p class="eyebrow">A LITTLE INVITATION, A LOT OF LOVE</p>
+        <h2 id="invitation-heading">Some moments are<br>meant to be <em>shared.</em></h2>
+        <p>With hearts full of love, we invite you to celebrate the beginning of our married life.</p>
+        <p>Your presence, laughter and blessings will make our special day even more beautiful. We can't wait to celebrate with the people who mean so much to us.</p>
+        <p class="signature">With love,<br><span>Apeksha &amp; Dhanraj</span></p>
+      </div>
+    </section>
+    <section class="celebration section-pad" id="celebration" aria-labelledby="celebration-heading">
+      <p class="eyebrow">SOMETHING BEAUTIFUL IS ON ITS WAY</p>
+      <h2 id="celebration-heading">The celebration <em>awaits.</em></h2>
+      <p class="section-lead">We're dreaming up our special day.<br>Here's where all the lovely details will find their home.</p>
+      <div class="details">
+        <article>
+          <span class="detail-number">01 / THE DAY</span>
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="9" y="12" width="30" height="28" rx="2"/><path d="M16 7v10M32 7v10M9 22h30M17 29h3m8 0h3m-14 5h3m8 0h3"/></svg>
+          <h3>A date to remember</h3>
+          <span class="status">To be announced</span>
+          <p>Our wedding date is still being finalised.<br>We'll share it here when it's confirmed.</p>
+        </article>
+        <article>
+          <span class="detail-number">02 / THE PLACE</span>
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M37 20c0 10-13 21-13 21S11 30 11 20a13 13 0 1 1 26 0Z"/><circle cx="24" cy="20" r="4"/></svg>
+          <h3>A beautiful setting</h3>
+          <span class="status">To be announced</span>
+          <p>We're finding the perfect place to say “forever.”<br>Venue details will follow soon.</p>
+        </article>
+      </div>
+      <p class="details-note"><span aria-hidden="true">✧</span> The date, venue and celebration details will be updated here once confirmed.</p>
+    </section>
+    <section class="closing" aria-labelledby="closing-heading">
+      <div aria-hidden="true" class="closing-ornament">✧</div>
+      <p class="eyebrow">UNTIL WE CELEBRATE TOGETHER</p>
+      <h2 id="closing-heading">The best is <em>yet to come.</em></h2>
+      <p>Keep a little room in your heart for our big day.</p>
+      <span class="closing-names">Apeksha &amp; Dhanraj</span>
+    </section>
+  </main>
+  <footer><a class="monogram" href="#home" aria-label="Back to top">A<span>&amp;</span>D</a><p>Made with love, for a lifetime of it.</p><a href="#home">Back to the beginning ↑</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="share-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Close sharing options">×</button></form>
+    <p class="eyebrow">A LITTLE JOY TO SHARE</p>
+    <h2>Our wedding invitation</h2>
+    <p>Share a little happiness. Copy our invitation link and send it to someone you'd love to celebrate with.</p>
+    <label for="share-url">Invitation link</label>
+    <input id="share-url" readonly>
+    <button id="copy-link" class="primary-button" type="button">Copy invitation link</button>
+    <p id="copy-status" role="status"></p>
+  </dialog>
+</body>
+</html>
