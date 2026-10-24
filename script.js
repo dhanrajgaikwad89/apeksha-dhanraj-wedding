@@ -1,3 +1,4 @@
+const isMarathi = document.documentElement.lang === 'mr';
 const hero = document.querySelector('.hero');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 if (window.matchMedia('(pointer: fine)').matches) {
@@ -17,19 +18,19 @@ const shareUrl = document.querySelector('#share-url');
 document.querySelector('#share').addEventListener('click', () => {
   const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:';
   shareUrl.value = isLocal ? '' : location.origin + location.pathname;
-  shareUrl.placeholder = isLocal ? 'Your invitation link will appear after publishing' : '';
+  shareUrl.placeholder = isLocal ? (isMarathi ? 'प्रकाशित झाल्यावर निमंत्रणाची लिंक इथे दिसेल' : 'Your invitation link will appear after publishing') : '';
   document.querySelector('#copy-link').disabled = isLocal;
-  document.querySelector('#copy-status').textContent = isLocal ? 'This is a local preview. Publish the website to share its link.' : '';
+  document.querySelector('#copy-status').textContent = isLocal ? (isMarathi ? 'ही स्थानिक झलक आहे. लिंक शेअर करण्यासाठी वेबसाइट प्रकाशित करा.' : 'This is a local preview. Publish the website to share its link.') : '';
   dialog.showModal();
 });
 document.querySelector('#copy-link').addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText(shareUrl.value);
-    document.querySelector('#copy-status').textContent = 'Invitation link copied.';
+    document.querySelector('#copy-status').textContent = (isMarathi ? 'निमंत्रणाची लिंक कॉपी झाली.' : 'Invitation link copied.');
   } catch {
     shareUrl.focus();
     shareUrl.select();
-    document.querySelector('#copy-status').textContent = 'Select and copy the link above.';
+    document.querySelector('#copy-status').textContent = (isMarathi ? 'वरील लिंक निवडून कॉपी करा.' : 'Select and copy the link above.');
   }
 });
 dialog.addEventListener('click', (event) => {
